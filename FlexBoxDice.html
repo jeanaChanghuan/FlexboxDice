@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flexbox Dice</title>
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+  </head>
+   <style type="text/css">
+     body{
+      height:100%;
+      width:100%;
+      display: flex;
+      display: -webkit-flex;
+      flex-direction: row;
+      -webkit-flex-direction:row;
+      flex-wrap: wrap;
+      -webkit-flex-wrap:wrap;
+      justify-content: center;
+      -webkit-justify-content:center;
+     }
+     div[class$='space']{
+       height: 104px;
+       width: 104px;
+       margin:16px;
+       padding:4px;
+       background: #e7e7e7;
+       box-shadow: 0 5px white inset,
+                   0 -5px #bbb inset,
+                   5px 0 #d7d7d7 inset,
+                   -5px 0 #d7d7d7 inset;
+
+        border-radius: 10%;     
+        -webkit-border-radius: 10%;      
+     }
+     .pip{
+        height:24px;
+        width:24px;
+        border-radius:50%;
+        -webkit-border-radius:50%;
+        background:#333;
+        box-shadow: 0 3px #111 inset,
+                    0 -3px #555 inset;
+        -webkit-box-shadow: 0 3px #111 inset,
+                    0 -3px #555 inset;         
+     }
+     .first-space{
+        display: flex;
+        display: -webkit-flex;
+        justify-content: center;
+        -webkit-justify-content: center;
+        align-items: center;
+        -webkit-align-items: center;
+     }
+     .second-space{
+      display: flex;
+       display: -webkit-flex;
+      justify-content: space-between;
+      -webkit-justify-content: space-between;
+     }
+     .second-space .pip:last-child{
+        align-self: flex-end;
+        -webkit-align-self: flex-end;
+     }
+     .third-space{
+      display: flex;
+      display: -webkit-flex;
+      justify-content: space-between;
+      -webkit-justify-content: space-between;
+     }
+     .third-space .pip:nth-child(2){
+       align-self: center;
+       -webkit-align-self: center;
+     }
+     .third-space .pip:last-child{
+      align-self: flex-end;
+      -webkit-align-self: flex-end;
+     }
+     .fourth-space,.sixth-space{
+      display: flex;
+      display: -webkit-flex;
+      justify-content: space-between;
+      -webkit-justify-content: space-between;
+     }
+     .fourth-space .column,
+     .sixth-space .column{
+       display: flex;
+       display: -webkit-flex;
+       flex-direction: column;
+       -webkit-flex-direction: column;
+       justify-content: space-between;
+       -webkit-justify-content: space-between;
+     }
+     .fifth-space{
+      display: flex;
+      display: -webkit-flex;
+      justify-content: space-between;
+      -webkit-justify-content: space-between;
+     }
+     .fifth-space .column:first-child,
+     .fifth-space .column:last-child{
+        display: flex;
+        display: -webkit-flex;
+        flex-direction: column;
+        -webkit-flex-direction: column;
+        justify-content: space-between;
+        -webkit-justify-content: space-between;
+     }
+     .fifth-space .column:nth-child(2){
+        align-self: center;
+        -webkit-align-self: center;
+     }
+   </style>
+  <body>
+      <div class="first-space">
+   			<div class="pip"></div>
+      </div>
+       <div class="second-space">
+        <div class="pip"></div>
+        <div class="pip"></div>
+      </div>
+       <div class="third-space">
+         <div class="pip"></div>
+         <div class="pip"></div>
+         <div class="pip"></div>
+      </div>
+       <div class="fourth-space">
+          <div class="column">
+            <div class="pip"></div>
+            <div class="pip"></div>
+          </div>
+           <div class="column">
+            <div class="pip"></div>
+            <div class="pip"></div>
+          </div>
+       </div>
+       <div class="fifth-space">
+          <div class="column">
+            <div class="pip"></div>
+            <div class="pip"></div>
+          </div>
+           <div class="column">
+            <div class="pip"></div>
+          </div>
+           <div class="column">
+            <div class="pip"></div>
+            <div class="pip"></div>
+          </div>
+       </div>
+       <div class="sixth-space">
+          <div class="column">
+            <div class="pip"></div>
+            <div class="pip"></div>
+            <div class="pip"></div>
+          </div>
+           <div class="column">
+            <div class="pip"></div>
+            <div class="pip"></div>
+            <div class="pip"></div>
+          </div>
+       </div>
+    
+  </body>
+</html>
